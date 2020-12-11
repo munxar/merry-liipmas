@@ -5,3 +5,7 @@
 canvas {
     image-rendering: crisp-edges;
 }
+
+audio {
+    display: none;
+}

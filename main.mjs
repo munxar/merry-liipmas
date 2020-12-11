@@ -5,9 +5,10 @@ const canvas = document.getElementById('c')
 const ctx = canvas.getContext('2d')
 const rand = (from, to) => Math.floor(from + (to - from) * Math.random())
 const urlParams = new URLSearchParams(window.location.search);
-const title = urlParams.get('title') || '';
-const text = urlParams.get('text') || ''
+const title = urlParams.get('title') || 'Merry Christmas';
+const text = urlParams.get('text') || 'to you'
 const fontSize = 30
+
 const colors = {
     black: '#414141',
     white: '#F7F7F5',
@@ -74,4 +75,10 @@ function animate(tick) {
                 flake.y = 0;                
             }            
     })
+}
+
+document.addEventListener('click', musicPlay);
+function musicPlay() {
+    document.getElementById('music').play();
+    document.removeEventListener('click', musicPlay);
 }
