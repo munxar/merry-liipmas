@@ -78,7 +78,10 @@ function animate(tick) {
 }
 
 document.addEventListener('click', musicPlay);
+const clip = document.getElementById('music');
+let playing = false
+
 function musicPlay() {
-    document.getElementById('music').play();
-    document.removeEventListener('click', musicPlay);
+    playing = !playing
+    playing ? clip.play() : clip.pause()
 }
