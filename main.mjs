@@ -77,11 +77,19 @@ function animate(tick) {
     })
 }
 
-document.addEventListener('click', musicPlay);
+const speaker = document.getElementsByClassName('speaker')[0]
+
+speaker.addEventListener('click', musicPlay);
 const clip = document.getElementById('music');
 let playing = false
 
 function musicPlay() {
-    playing = !playing
-    playing ? clip.play() : clip.pause()
+    playing = !playing    
+    if(playing) {
+        clip.play()
+        speaker.classList.remove('mute')
+    } else {
+        clip.pause()
+        speaker.classList.add('mute')
+    }
 }

@@ -9,3 +9,26 @@ canvas {
 audio {
     display: none;
 }
+
+.speaker {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    fill: #F7F7F5;
+    stroke:#F7F7F5;
+    stroke-width: 5;
+    stroke-linejoin: round;
+}
+
+.wave {
+    fill:none;    
+}
+
+.speaker.mute {    
+    fill: #A5A59F;
+    stroke: #A5A59F;
+}
+
+.speaker.mute > .wave {
+    display: none;
+}
